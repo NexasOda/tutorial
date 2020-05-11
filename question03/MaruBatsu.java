@@ -1,4 +1,4 @@
-package test2.tutorial.question03;
+package tutorial.question03;
 
 import java.util.Scanner;
 

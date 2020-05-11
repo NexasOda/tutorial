@@ -1,4 +1,4 @@
-package test2.tutorial.question02;
+package tutorial.question02;
 
 import java.io.BufferedReader;
 import java.io.IOException;

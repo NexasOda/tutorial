@@ -1,4 +1,4 @@
-package test2.tutorial.question01;
+package tutorial.question01;
 
 public class SurNumber {
 	/**
