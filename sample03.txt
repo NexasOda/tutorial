@@ -1,6 +1,6 @@
 10 The quick brown fox
 20 jumped over the very 
-30 lazy dog.
+30 hello
 40
 50
 60
