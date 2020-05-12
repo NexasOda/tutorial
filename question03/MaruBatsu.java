@@ -2,7 +2,6 @@ package tutorial.question03;
 
 import java.util.Scanner;
 
-
 /**
  * ○×ゲーム
  * 交代で○×を入力し、縦横斜めに、○か×が並んだらその場で勝負あり。
@@ -42,7 +41,7 @@ public class MaruBatsu {
 		String trun = "◯";
 		String[] field = { "１", "２", "３", "４", "５", "６", "７", "８", "９" };
 
-		try (Scanner scan = new Scanner(System.in)) {
+			Scanner scan = new Scanner(System.in);
 
 			for (int i = 0; i < field.length; i++) {
 				displayField(field);
@@ -62,7 +61,9 @@ public class MaruBatsu {
 					System.out.println("Draw!!");
 				}
 			}
-		}
+
+
+
 	}
 
 	/**
@@ -143,8 +144,16 @@ public class MaruBatsu {
 	private static void displayField(String[] field) {
 		System.out.println("－－－－－－－－－");
 		for (int i = 0; i < field.length; i++) {
-			System.out.print("　" + field[i] + "　");
-			if ((i + 1) % 3 == 0) {
+			if((i+1) == 2 || (i+1) == 5 || (i+1) == 8 ) {
+			System.out.print("|　" + field[i] + "　|");
+			}else {
+				System.out.print("　" + field[i] + "　");
+			}
+
+			if ((i + 1) % 3 == 0 && (i + 1) != 9) {
+				System.out.println();
+				System.out.println("------+------+------");
+			}else if((i + 1) == 9) {
 				System.out.println();
 			}
 		}
