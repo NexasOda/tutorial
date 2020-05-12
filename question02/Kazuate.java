@@ -25,29 +25,36 @@ public class Kazuate {
 	public static void main(String[] args) {
 		Random random = new Random();
 
-		int ans = random.nextInt(1000);
-		int count = 0;
-		int userAns = 0;
+		int playAgain = 1;
+
+		while (playAgain == 1) {
+			int ans = random.nextInt(1000);
+			int count = 0;
+			int userAns = 0;
 
 		System.out.println("0～999の数字を入力してください。");
 
 		do {
-			System.out.printf("%d> ", count + 1);
-			userAns = getNumberInput();
-			count++;
-			System.out.printf("\t%d ..... ", userAns);
-			if (ans == userAns) {
-				System.out.println("正解！");
-			} else if (ans < userAns) {
-				System.out.println("大きすぎます。");
-			} else {
-				System.out.println("小さすぎます。");
-			}
-		} while (userAns != ans);
+				System.out.printf("%d> ", count + 1);
+				userAns = getNumberInput();
+				System.out.printf("\t%d ..... ", userAns);
+				if (ans == userAns) {
+					System.out.println("正解！");
+					break;
+				} else if (ans < userAns) {
+					System.out.println("大きすぎます。");
+				} else {
+					System.out.println("小さすぎます。");
+				}
+				count++;
+			} while (userAns != ans);
 
-		System.out.println("あなたは回答にたどり着くまでに" + count + "回かかりました。");
-
-	}
+	System.out.println("あなたは回答にたどり着くまでに" + count + "回かかりました。");
+			System.out.println("もう一度遊びますか？ Yes:1 / No:1以外");
+			System.out.print(">");
+			String playAgainS = getStringInput();
+			playAgain = Integer.parseInt(playAgainS);
+		}
 
 	private static int getNumberInput() {
 		int userAns = -1;
