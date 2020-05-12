@@ -9,11 +9,9 @@ public class PowNumber {
 	 */
 	public static int calc(int a, int b) {
 		int ret = a;
-
-		for (int i = 0 ; i < b ; i ++) {
-			ret = ret + a;
+		for(int i = 0; i<b; i++ ) {
+			ret = ret * a;
 		}
-
 		return ret;
 	}
 }

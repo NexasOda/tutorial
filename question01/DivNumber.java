@@ -8,6 +8,6 @@ public class DivNumber {
 	 * @return
 	 */
 	public static int calc(int a, int b) {
-		return a - b;
+		return a / b;
 	}
 }

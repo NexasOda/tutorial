@@ -8,6 +8,6 @@ public class SurNumber {
 	 * @return
 	 */
 	public static int calc(int a, int b) {
-		return b - a;
+		return a % b;
 	}
 }
