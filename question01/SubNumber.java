@@ -8,7 +8,7 @@ public class SubNumber {
 	 * @return
 	 */
 	public static int calc(int a, int b) {
-		return 0 - b;
+		return a - b;
 	}
 
 }
