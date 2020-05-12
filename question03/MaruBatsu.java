@@ -102,6 +102,19 @@ public class MaruBatsu {
 					return true;
 				}
 			}
+			//斜め比較
+			if(i == 0 ) {
+				if((field[i]) == (field[i + 4])
+						&& (field[i + 4]) == (field[i + 8])) {
+					return true;
+				}
+			}
+			if(i == 2) {
+				if((field[i]) == (field[i + 2])
+						&& (field[i + 2]) == (field[i + 4])) {
+					return true;
+				}
+			}
 		}
 
 		return false;
