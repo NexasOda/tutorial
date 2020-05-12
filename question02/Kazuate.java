@@ -21,7 +21,6 @@ import java.util.Random;
  *
  */
 
-
 public class Kazuate {
 	public static void main(String[] args) {
 		Random random = new Random();
@@ -32,24 +31,22 @@ public class Kazuate {
 
 		System.out.println("0～999の数字を入力してください。");
 
-		while (count < 10) {
+		do {
 			System.out.printf("%d> ", count + 1);
 			userAns = getNumberInput();
+			count++;
 			System.out.printf("\t%d ..... ", userAns);
 			if (ans == userAns) {
 				System.out.println("正解！");
-				break;
 			} else if (ans < userAns) {
 				System.out.println("大きすぎます。");
 			} else {
 				System.out.println("小さすぎます。");
 			}
-			count++;
-		}
+		} while (userAns != ans);
 
-		if (ans != userAns) {
-			System.out.println("Game Over! 正解は " + ans + " でした。");
-		}
+		System.out.println("あなたは回答にたどり着くまでに" + count + "回かかりました。");
+
 	}
 
 	private static int getNumberInput() {
