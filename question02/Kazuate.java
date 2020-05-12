@@ -32,9 +32,9 @@ public class Kazuate {
 			int count = 0;
 			int userAns = 0;
 
-			System.out.println("0～999の数字を入力してください。");
+		System.out.println("0～999の数字を入力してください。");
 
-			while (count < 10) {
+		do {
 				System.out.printf("%d> ", count + 1);
 				userAns = getNumberInput();
 				System.out.printf("\t%d ..... ", userAns);
@@ -47,19 +47,14 @@ public class Kazuate {
 					System.out.println("小さすぎます。");
 				}
 				count++;
-			}
+			} while (userAns != ans);
 
-			if (ans != userAns) {
-				System.out.println("Game Over! 正解は " + ans + " でした。");
-			}
-
+	System.out.println("あなたは回答にたどり着くまでに" + count + "回かかりました。");
 			System.out.println("もう一度遊びますか？ Yes:1 / No:1以外");
 			System.out.print(">");
 			String playAgainS = getStringInput();
 			playAgain = Integer.parseInt(playAgainS);
-
 		}
-	}
 
 	private static int getNumberInput() {
 		int userAns = -1;
